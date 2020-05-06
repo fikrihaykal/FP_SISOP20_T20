@@ -24,8 +24,8 @@ int main(int argc, char *argv[]){
             printf(1, "cmp fail : cannot open %s\n", argv[2]);
             exit();
         } else{
-            while((fr = read(fd1, sA, sizeof(sA)) > 0)){}
-            while((fr = read(fd2, sB, sizeof(sB)) > 0)){}
+            while((fr = read(fd1, sA, sizeof(sA))) > 0){}
+            while((fr = read(fd2, sB, sizeof(sB))) > 0){}
 
             compare();
 
@@ -37,6 +37,8 @@ int main(int argc, char *argv[]){
 
     close(fd1);
     close(fd2);
+
+    exit();
 
     return 0;
 }
