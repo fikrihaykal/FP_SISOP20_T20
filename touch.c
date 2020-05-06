@@ -4,5 +4,18 @@
 #include "user.h"
 
 int main(int argc, char *argv[]){
-    // Masih belum untuk touch.c
+	int fd;
+
+	if(argc!=2){
+		printf(1, "Arguments : touch [filename]\n");
+	}
+
+	if((fd = open(argv[1], O_CREATE | O_RDWR)) < 0){
+		printf(1, "failed update timestamp: %s\n", argv[1]);
+	} else{
+		write(fd, "", 0);
+	}
+
+	close(fd);
+	exit();
 }
