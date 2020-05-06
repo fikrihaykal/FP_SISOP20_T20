@@ -3,7 +3,7 @@
 #include "stat.h"
 #include "user.h"
 
-char sA[2048], sB[2048];
+char sA[10000], sB[10000];
 int baris, difCheck;
 
 void compare();
